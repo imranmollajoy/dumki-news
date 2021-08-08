@@ -3,8 +3,7 @@
             <h2 class="text-left category-header">International<i class="fas fa-angle-double-right"></i> </h2>
         </a>
         <div class="intro"></div>
-        <div class="row">
-            <div class="col-auto">
+            <div class="col">
                 <div class="card-group">
 				{% for post in site.categories.international limit:3 %}
                     <div class="card news-card">
@@ -20,7 +19,6 @@
 					{% endfor %}
 					
                 </div>
-            </div>
         </div>
     </div>
 </section>
