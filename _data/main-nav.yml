@@ -1,4 +1,6 @@
 - name: National
   link: /pages/categories/national.html
+  b: জাতীয়
 - name: International
   link: /pages/categories/international.html
+  b: আন্তর্জাতিক
