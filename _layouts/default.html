@@ -4,6 +4,9 @@
   {%- include head.html -%}
 
   <body>
+  {% if site.constructing %}
+  k
+  {% else %}
   {%-  include social-navbar.html -%}
 
   {% if page.url == "/" %}
@@ -17,7 +20,7 @@
     </main>
 
     {%- include footer-black.html -%}
-
+{% endif %}
   </body>
 <script defer src="/assets/js/bootstrap.min.js"></script>
 </html>
