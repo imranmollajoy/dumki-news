@@ -1,0 +1,22 @@
+---
+label: News
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: category
+  label: category
+- type: boolean
+  name: featured
+  label: featured
+- type: file
+  name: img
+  label: img
