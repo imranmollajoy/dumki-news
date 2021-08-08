@@ -4,17 +4,14 @@
         <div class="col-12 featured-top-img-col">
 		{% assign fp = site.posts | where: 'featured', 'true' %}
 		{% for post in fp limit:1 %}
-		<p class="btn-primary category-button-featured" role="button" >Featured</p>
-            <div class="card" style="border: none;"><img class="card-img-top w-100 d-block" src="{{ post.img }}" />
+            <div class="card" style="border: none;"><img class="card-img-top w-100 d-block" src="{{ post.img  | relative_url }}" />
 			
                 <div class="card-body featured-top-content">
-				<div class="container">
-                    <div class="col">
-					
+                    <div class="col"><a class="btn btn-primary category-button" role="button" >Featured</a>
                         <a href="{{ post.url }}"><h4><strong>{{ post.title }}</strong></h4></a>
                     </div>
                 </div>
-				</div>
+				
             </div>
 			{% endfor %}
         </div>
