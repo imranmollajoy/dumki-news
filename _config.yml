@@ -30,7 +30,7 @@ twitter_username: jekyllrb
 facebook_username: jekyllrb
 github_username:  jekyll
 
-constructing: true
+constructing: false
 # Build settings
 theme: minima
 plugins:
