@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+  {%-  include social-navbar.html -%}
+
+  {% if page.url == "/" %}
+    {%- include featured-header.html -%}
+  {% endif %}
+    {%- include navbar.html -%}
+
+    <main class="page-content" aria-label="Content">
+   
+        {{ content }}
+    </main>
+
+    {%- include footer-black.html -%}
+
+  </body>
+<script defer src="/assets/js/bootstrap.min.js"></script>
+</html>
