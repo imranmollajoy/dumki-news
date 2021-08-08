@@ -28,3 +28,5 @@ fields:
 - type: boolean
   name: featured
   label: featured
+pages:
+- _posts/test.md
