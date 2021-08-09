@@ -2,7 +2,7 @@
 layout: post
 title:  "মোস্তাফিজের অবিশ্বাস্য বোলিংয়ের পরেও জয় অস্ট্রেলিয়ার"
 date:   2021-03-08 23:24:01 +0600
-category: national
+category: sports
 featured: true
 img: /assets/images/bd.jpg
 ---

@@ -1,0 +1,29 @@
+<section class="posts-home">
+    <div class="container">
+	<a href="{{ "/pages/categories/sports.html" | relative_url }}">
+            <h2 class="text-left category-header">Sports<i class="fas fa-angle-double-right"></i> </h2>
+        </a>
+        <div class="row">
+            <div class="col">
+                <div class="card-group">
+			{% for post in site.categories.sports limit: 3 %}
+                    <div class="card sports-card"><img class="card-img-top w-100 d-block sports-img" src={% if post.img %} 
+					"{{ post.img  | relative_url }}" 
+					{% else %} 
+					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}  />
+                        <div class="card-body"><a href="{{ post.url | relative_url }}">
+                                <h4>{{ post.title }}</h4>
+                            </a>
+                            <p class="card-text">
+							{% if post.show_excerpt %}
+						{{ post.excerpt }}
+						{% endif %}</p>
+                        </div>
+                    </div>
+			{% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
