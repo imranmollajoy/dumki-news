@@ -5,8 +5,8 @@
                 <h3>Categories</h3>
                 <ul>
                     {% for item in site.data.main-nav %}
-                <li
-				<a href="{{ item.link }}"> {{ item.name }}
+                <li>
+				<a href="{{ item.link | relative_url }}"> {{ item.b }}
 				</a>
 				</li>
 				
@@ -14,11 +14,14 @@
                 </ul>
             </div>
             <div class="col-sm-6 col-md-3 item">
-                <h3>About</h3>
+                <h3>Site Navigation</h3>
                 <ul>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Careers</a></li>
+                   {% for item in site.data.footer-site-links %}
+                <li>
+				<a href="{{ item.link | relative_url }}"> {{ item.name }}
+				</a>
+				</li>
+				{% endfor %}
                 </ul>
             </div>
             <div class="col-md-6 item text">

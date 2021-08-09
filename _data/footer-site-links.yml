@@ -1,0 +1,4 @@
+- name: হোম
+  link: /
+- name: ড্যাশবোর্ড
+  link: /admin
