@@ -22,7 +22,11 @@ ul{
   box-shadow: none;
   border: none;
   margin-bottom: 0;
-  transition:all 0.4s;
+  transition:all 0.3s;
+  position:sticky;
+  z-index:888;
+  top:0;
+  width:100%;
   
 }
 .is-pinned{
@@ -183,9 +187,11 @@ img {
 nav#social-top {
   background: var(--bs-gray-dark);
   position: fixed; /* Make it stick/fixed */
+  width:100%;
   top: 0; /* Stay on top */
-  width: 100%; /* Full width */
+  left:0;
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index:999;
 }
 
 .social-date {

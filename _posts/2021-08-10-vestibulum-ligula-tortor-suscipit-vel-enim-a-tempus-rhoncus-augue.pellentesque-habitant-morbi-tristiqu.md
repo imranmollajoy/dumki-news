@@ -10,7 +10,7 @@ national: ''
 international: ''
 sports: ''
 entertainment: ''
-category: 'national '
+category: 'national'
 
 ---
 senectus et netus et malesuada fames ac turpis egestas. Sed consectetur orci et ex laoreet venenatis sit amet et tellus. Etiam mattis placerat tempor. Maecenas congue sollicitudin erat sit amet dignissim. Nulla id vulputate diam. Cras eget elit quis urna molestie mollis nec tempus diam. Maecenas sagittis, ligula ac vulputate egestas, arcu nibh vulputate tellus, et pellentesque eros ante sit amet nibh. Sed arcu eros, tempus id neque sit amet, commodo euismod purus. Sed elementum ligula vitae cursus condimentum. Sed ante sem, luctus at dapibus at, feugiat porttitor felis. Nunc sit amet magna justo. Nam maximus, nulla eu fringilla venenatis, ex arcu fermentum nisi, ac volutpat urna diam et magna.

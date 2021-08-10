@@ -5,7 +5,8 @@ layout: default
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 post-content">
-			<a class="btn btn-primary" href="{{ page.category | relative_url  }}.html">{{ page.b-category }}</a>
+			<a class="btn btn-primary" href="{{ page.category | relative_url  }}.html">
+			{{ page.b-category }}</a>
 			<p class="post-meta">
              <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}

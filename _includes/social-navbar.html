@@ -1,14 +1,8 @@
 <nav class="navbar navbar-light navbar-expand-md" id="social-top">
-    <div class="container-fluid">
-        <div class="col">
-            <div class="text-start social-icons text-end">
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-youtube"></i></a>
-			</div>
-        </div>
-        <div class="col">
-            <p class="social-date">| {{ 'today' | date: "%b %d, %Y %H:%M" }}</p>
-        </div>
-    </div>
+       <marquee behavior="scroll" direction="left">
+	   {% for post in site.posts limit:6 %}
+	    <a href="{{ post.url | relative_url }}" style="color:var(--bs-light); padding:0 32px;">{{ post.title}}</a>
+	   {% endfor %}
+	   </marquee>
+
 </nav>

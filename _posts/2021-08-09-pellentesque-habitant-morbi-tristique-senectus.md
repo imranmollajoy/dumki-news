@@ -9,6 +9,6 @@ national: ''
 international: ''
 sports: ''
 entertainment: ''
-category: 'sports '
+category: 'sports'
 
 ---
