@@ -9,6 +9,7 @@ national: ''
 international: ''
 sports: ''
 entertainment: ''
+category: 'sports '
 
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a purus mauris. Vestibulum efficitur purus odio, et mattis nulla mattis at. Aenean ac lorem sit amet metus blandit hendrerit. Nullam iaculis varius quam in pretium. Curabitur rutrum massa a neque lobortis, non feugiat massa hendrerit. Ut molestie mauris dignissim, mattis orci eu, dictum nisi. Donec vitae pretium neque. Phasellus posuere tellus eu tristique tincidunt. Mauris at aliquam eros. Quisque hendrerit, ipsum vitae molestie bibendum, purus turpis laoreet nulla, ut elementum nulla velit quis justo. Donec facilisis tincidunt elit, eget hendrerit elit auctor ac. Integer non risus sed diam feugiat tincidunt at sit amet felis. Ut condimentum imperdiet ultrices. Donec dictum tortor vel tellus cursus, quis ultrices risus gravida. Proin cursus ullamcorper bibendum.
