@@ -59,6 +59,15 @@ fields:
 - type: boolean
   name: featured
   label: featured
+- name: excerpt
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Excerpt
 pages:
 - _posts/2021-08-09-aenean-consectetur-pulvinar-suscipit.md
 - _posts/2021-08-09-pellentesque-habitant-morbi-tristique-senectus.md
