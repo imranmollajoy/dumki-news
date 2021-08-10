@@ -10,5 +10,6 @@ national: ''
 international: ''
 sports: ''
 entertainment: ''
+category: 'international '
 
 ---
