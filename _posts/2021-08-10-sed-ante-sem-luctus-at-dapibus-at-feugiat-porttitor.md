@@ -1,6 +1,6 @@
 ---
 layout: post
-b-category: জাতীয়
+b-category: আন্তর্জাতিক
 title: 'Sed ante sem, luctus at dapibus at, feugiat porttitor '
 date: 2021-08-10 05:00:00 +0000
 img: ''
