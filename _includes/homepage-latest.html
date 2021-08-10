@@ -18,7 +18,7 @@
                             <h3 class="name"><strong>{{ post.title }}</strong></h3>
                         </a>
                         <p class="description">
-						{{ post.excerpt }}
+						{{ post.excerpt  | truncatewords: 25, "..." }}
 						</p>
                     
                
