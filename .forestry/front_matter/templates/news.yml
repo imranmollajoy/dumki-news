@@ -36,48 +36,29 @@ fields:
   label: Bangla Category
   showOnly:
     value: national
+- name: category
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - 'national '
+    - 'international '
+    - 'sports '
+    - 'opinion '
+    - 'entertainment '
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
 - type: file
   name: img
   label: img
 - type: boolean
   name: featured
   label: featured
-- name: national
-  type: text
-  config:
-    required: false
-  hidden: true
-  showOnly:
-    field: b-category
-    value: জাতীয়
-  label: n
-- name: international
-  type: text
-  config:
-    required: false
-  label: in
-  hidden: true
-  showOnly:
-    field: b-category
-    value: আন্তর্জাতিক
-- name: sports
-  type: text
-  config:
-    required: false
-  label: sports
-  hidden: true
-  showOnly:
-    field: b-category
-    value: খেলাধুলা
-- name: entertainment
-  type: text
-  config:
-    required: false
-  label: entertainment
-  hidden: true
-  showOnly:
-    field: b-category
-    value: বিনোদন
 pages:
 - _posts/2021-08-09-aenean-consectetur-pulvinar-suscipit.md
 - _posts/2021-08-09-pellentesque-habitant-morbi-tristique-senectus.md
