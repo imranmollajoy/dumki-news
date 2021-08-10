@@ -16,7 +16,7 @@ layout: default
              {%- endif -%}</p>
 			 <h1 itemprop="name headline">{{ page.title | escape }}</h1>
 			<img class="post-img" src=
-{% if page.img %} "{{ page.img  | relative_url }}" {% else %} 
+{% if page.img != '' %} "{{ page.img  | relative_url }}" {% else %} 
 					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}  />
 			
                 
