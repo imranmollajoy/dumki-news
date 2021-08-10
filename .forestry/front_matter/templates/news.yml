@@ -78,3 +78,5 @@ fields:
   showOnly:
     field: b-category
     value: বিনোদন
+pages:
+- _posts/lorem-ipsum-dolor-sit-amet-consectetur-adipiscing-elit.proin-a-purus-mauri.md
