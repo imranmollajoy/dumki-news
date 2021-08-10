@@ -79,6 +79,7 @@ fields:
     field: b-category
     value: বিনোদন
 pages:
+- _posts/2021-08-09-aenean-consectetur-pulvinar-suscipit.md
 - _posts/2021-08-09-pellentesque-habitant-morbi-tristique-senectus.md
 - _posts/2021-08-09-ut-condimentum-nisl-nec-imperdiet-vulputate-purus-nibh.md
 - _posts/2021-08-10-aenean-non-bibendum-urna-a-auctor-tortor.md
