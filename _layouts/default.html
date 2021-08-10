@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "ben" }}">
 
   {%- include head.html -%}
 
@@ -14,7 +14,7 @@
   {% endif %}
     {%- include navbar.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" aria-label="Content" style="margin-top:64px">
    
         {{ content }}
     </main>
@@ -24,4 +24,5 @@
   </body>
 <script defer src="{{ "/assets/js/bootstrap.min.js" | relative_url }}"></script>
 <script defer src="{{ "/assets/js/misc.js" | relative_url }}"></script>
+
 </html>

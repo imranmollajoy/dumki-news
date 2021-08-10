@@ -1,7 +1,7 @@
 ---
 layout: post
 b-category: জাতীয়
-title: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a purus mauri
+title: পদ্মায় ফেরিতে যানবাহন পারাপার নিয়ে নতুন নির্দেশনা
 date: 2021-08-10 10:47:00 +0000
 img: "/uploads/time-3222267_1280.jpg"
 featured: true

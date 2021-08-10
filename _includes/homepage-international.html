@@ -14,7 +14,7 @@
 					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}/>
                         <div class="card-body d-flex flex-column-reverse justify-content-end news-card-content">
                             <a href="{{ post.url | relative_url }}"><h4 class="card-title"><strong> {{ post.title }}</strong></h4></a>			
-                            <p class="card-text">{{ post.excerpt | strip_html }}</p>
+                            <p class="card-text"><time class="postedon" datetime="{{ post.date | date_to_xmlschema }}"><span class="postedago"></span></time></p>
                         </div>
                     </div>
 					{% endfor %}

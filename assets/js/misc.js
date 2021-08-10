@@ -21,3 +21,51 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+/* date ago snippet */
+function ago(date) {
+    function render(n, unit) {
+        return n + " " + unit + ((n == 1) ? "" : "") + " আগে";
+    }
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+
+    var interval = Math.floor(seconds / (60 * 60 * 24 * 365));
+    if (Math.floor(seconds / (60 * 60 * 24 * 30 * 365)) >= 1) {
+        return render(interval.toLocaleString('ben-BD'), "বছর");
+    }
+    interval = Math.floor(seconds / (60 * 60 * 24 * 30));
+    if (interval >= 1) {
+        return render(interval.toLocaleString('ben-BD'), "মাস");
+    }
+    interval = Math.floor(seconds / (60 * 60 * 24));
+    if (interval >= 1) {
+        return render(interval.toLocaleString('ben-BD'), "দিন");
+    }
+    interval = Math.floor(seconds / (60 * 60));
+    if (interval >= 1) {
+        return render(interval.toLocaleString('ben-BD'), "ঘন্টা");
+    }
+    interval = Math.floor(seconds / 60);
+    if (interval >= 1) {
+        return render(interval.toLocaleString('ben-BD'), "মিনিট");
+    }
+    interval = Math.floor(seconds);
+    return render(interval.toLocaleString('ben-BD'), "সেকেন্ড");
+}
+var count = 0;
+var date = [];
+document.querySelectorAll('.postedon').forEach(function(elem) {
+	var d = elem.getAttribute('datetime'); 
+	date[count] = Date.parse(d);
+	count++;
+	});
+	
+var posted = document.querySelectorAll(".postedago");
+for(i=0;i<date.length;i++)
+{
+	posted[i].innerHTML = ago(date[i]);
+}
+
+
+

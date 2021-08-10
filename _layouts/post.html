@@ -8,13 +8,12 @@ layout: default
 			<a class="btn btn-primary" href="{{ page.category | relative_url  }}.html">
 			{{ page.b-category }}</a>
 			<p class="post-meta">
-             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            {{ page.date | date: date_format }}
-            </time>
-             {%- if page.author -%}
-               • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-             {%- endif -%}</p>
+			{% assign months = "জানুয়ারি|ফেব্রুয়ারি|মার্চ|এপ্রিল|মে|জুন|জুলাই|আগষ্ট|সেপ্টেম্বর|অক্টোবর|নভেম্বর|ডিসেম্বর" | split: "|" %}
+            {% assign m = page.date | date: "%-m" | minus: 1 %}
+            {% assign day = page.date | date: "%d" %}
+            {% assign month = months[m] %}
+            {% assign year = page.date | date: "%y" %}
+            <p class="date"><span class="num">{{ day }}</span> {{ month }}, <span class="num">{{ year }}</span></p>
 			 <h1 itemprop="name headline">{{ page.title | escape }}</h1>
 			<img class="post-img" src=
 {% if page.img != '' %} "{{ page.img  | relative_url }}" {% else %} 
@@ -35,23 +34,33 @@ layout: default
                         <h6>Share this</h6><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fas fa-link"></i></a>
                     </div>
                 </aside>
-                <h3>You may</h3>
+                <h3>দেখতে পারেন</h3>
+				
                 <aside class="post-sidebar-aside">
-                    <article class="with-image"><img src="img_20200109_150539.jpg" />
-                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
-                    </article>
-                    <article>
-                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
-                    </article>
-                    <article>
-                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
-                    </article>
-                    <article>
-                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
-                    </article>
+
+{% for post in site.posts limit:6 %}
+   {% if post.url != page.url %}
+                    <article class="with-image"><img src={% if post.img != '' %}{{ post.img  | relative_url }} {% else %}{{ "/assets/images/default.jpg" | relative_url }}{% endif %} />
+					    <p style="margin-top:4px;margin-bottom:0;">{{ post.b-category }}</p>
+                        <a href="{{ post.url | relative_url }}">
+						<h5>{{ post.title }}</h5>
+						</a>
+                    </article>  
+			{% endif %}
+    {% endfor %}
                 </aside>
             </div>
         </div>
     </div>
 	  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </section>
+<script>
+var enDate = document.querySelectorAll('.num');
+var stringDate = [];
+i=0;
+enDate.forEach(function(d){
+	stringDate[i] = Number(d.innerHTML);
+	enDate[i].innerHTML = stringDate[i].toLocaleString('ben-BD');
+	i++;
+});
+</script>
