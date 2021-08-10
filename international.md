@@ -1,5 +1,6 @@
 ---
 layout: category-page
+b-title: আন্তর্জাতিক
 title: international
 ---
 

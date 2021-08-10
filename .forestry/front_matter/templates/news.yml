@@ -22,6 +22,11 @@ fields:
   label: category
   config:
     required: true
+- type: text
+  name: b-category
+  label: b-category
+  config:
+    required: true
 - type: file
   name: img
   label: img

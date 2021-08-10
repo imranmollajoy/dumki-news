@@ -1,3 +1,11 @@
+a.btn{
+	color:white;
+	text-transform:capitalize;
+}
+a.btn:hover{
+	text-decoration:none;
+}
+
 body{
 	box-sizing:border-box;
 }
@@ -6,7 +14,7 @@ ul{
 	margin:0;
 }
 .navigation-clean-search {
-  background: var(--bs-white);
+  background: var(--bs-light);
   padding-top: .75rem;
   padding-bottom: .75rem;
   color: #333;
@@ -18,17 +26,13 @@ ul{
   
 }
 .is-pinned{
-	background: var(--bs-light);
+	background: var(--bs-white);
+	padding-top: .75rem;
+  padding-bottom: .75rem;
 	-webkit-box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.35); 
 box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.35);
 }
 
-@media (min-width:768px) {
-  .navigation-clean-search {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
 
 .navigation-clean-search .navbar-brand {
   font-weight: bold;
@@ -341,7 +345,88 @@ a {
 .sports-card {
   padding: 0 4px;
 }
+.post-img {
+  max-width: 100%;
+}
 
+.post-sidebar img {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .post-sidebar-aside {
+  }
+}
+
+@media (min-width: 768px) {
+  .post-sidebar {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.post-sidebar article {
+  border-bottom: 2px solid rgba(52,58,64,0.26);
+  margin: 16px 0;
+}
+
+.post-sidebar h3 {
+  font-weight: 400;
+}
+
+article.with-image h5 {
+  font-weight: 500;
+}
+
+.post-sidebar h5 {
+  font-weight: 400;
+}
+#post .post-body{
+	padding-top:64px;
+}
+@media (max-width: 576px) {
+  #post .post-content {
+    padding: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  #post .post-content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+  #post .post-sidebar .share-post {
+	  margin-bottom: 36px;
+  margin-top: 128px;
+}
+}
+
+@media (min-width: 1200px) {
+  #post .post-content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+}
+
+#post .share-post {
+  margin-bottom: 36px;
+  margin-top: 36px;
+}
+
+#post .share-post i {
+  font-size: 2rem;
+}
+
+#post .share-post a {
+  padding-right: 8px;
+}
 .sports-img {
   width: 100%;
   height: 245px;

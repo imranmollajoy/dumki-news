@@ -1,6 +1,6 @@
-- name: National
-  link: /pages/categories/national.html
+- name: জাতীয়
+  link: /জাতীয়.html
   b: জাতীয়
-- name: International
-  link: /pages/categories/international.html
+- name: জাতীয়
+  link: /আন্তর্জাতিক.html
   b: আন্তর্জাতিক

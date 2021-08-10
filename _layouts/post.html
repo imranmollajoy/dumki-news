@@ -1,29 +1,55 @@
 ---
 layout: default
 ---
-<div class="container">
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
+<section id="post">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 post-content">
+			<a class="btn btn-primary" href="{{ page.category | relative_url  }}.html">{{ page.b-category }}</a>
+			<p class="post-meta">
+             <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            {{ page.date | date: date_format }}
+            </time>
+             {%- if page.author -%}
+               • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+             {%- endif -%}</p>
+			 <h1 itemprop="name headline">{{ page.title | escape }}</h1>
+			<img class="post-img" src={% if post.img %} "{{ post.img  | relative_url }}" {% else %} 
+					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}  />
+			
+                
+                <div class="post-body">
     {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
+              </div>
+			  
+			  {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
-</div>
+            </div>
+            <div class="col align-self-center post-sidebar">
+                <aside class="share-post">
+                    <div>
+                        <h6>Share this</h6><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fas fa-link"></i></a>
+                    </div>
+                </aside>
+                <h3>You may</h3>
+                <aside class="post-sidebar-aside">
+                    <article class="with-image"><img src="img_20200109_150539.jpg" />
+                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
+                    </article>
+                    <article>
+                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
+                    </article>
+                    <article>
+                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
+                    </article>
+                    <article>
+                        <h5>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur</h5>
+                    </article>
+                </aside>
+            </div>
+        </div>
+    </div>
+	  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</section>
