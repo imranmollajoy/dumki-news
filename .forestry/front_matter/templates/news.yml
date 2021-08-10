@@ -42,11 +42,11 @@ fields:
   config:
     required: false
     options:
-    - 'national '
-    - 'international '
-    - 'sports '
-    - 'opinion '
-    - 'entertainment '
+    - 'national'
+    - 'international'
+    - 'sports'
+    - 'opinion'
+    - 'entertainment'
     source:
       type: simple
       section: 
