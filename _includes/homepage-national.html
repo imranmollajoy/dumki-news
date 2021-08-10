@@ -8,7 +8,7 @@
                 <div class="card-group">
 				{% for post in site.categories.national limit:3 %}
                     <div class="card news-card">
-					<img class="card-img-top w-100 d-block news-thumbnail" src={% if post.img %} 
+					<img class="card-img-top w-100 d-block news-thumbnail" src={% if post.img != '' %} 
 					"{{ post.img  | relative_url }}" 
 					{% else %} 
 					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}/>
