@@ -15,7 +15,8 @@ layout: default
                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
              {%- endif -%}</p>
 			 <h1 itemprop="name headline">{{ page.title | escape }}</h1>
-			<img class="post-img" src={% if post.img %} "{{ post.img  | relative_url }}" {% else %} 
+			<img class="post-img" src=
+{% if page.img %} "{{ page.img  | relative_url }}" {% else %} 
 					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}  />
 			
                 
