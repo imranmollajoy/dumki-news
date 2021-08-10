@@ -19,7 +19,7 @@ fields:
     required: true
 - name: b-category
   type: select
-  default: ''
+  default: জাতীয়
   config:
     required: true
     options:
@@ -34,26 +34,47 @@ fields:
       file: 
       path: 
   label: Bangla Category
+  showOnly:
+    value: national
 - type: file
   name: img
   label: img
 - type: boolean
   name: featured
   label: featured
-- name: category
-  type: select
-  default: ''
+- name: national
+  type: text
   config:
-    required: true
-    options:
-    - national
-    - international
-    - sports
-    - entertainment
-    - opinion
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Category
+    required: false
+  hidden: true
+  showOnly:
+    field: b-category
+    value: জাতীয়
+  label: n
+- name: international
+  type: text
+  config:
+    required: false
+  label: in
+  hidden: true
+  showOnly:
+    field: b-category
+    value: আন্তর্জাতিক
+- name: sports
+  type: text
+  config:
+    required: false
+  label: sports
+  hidden: true
+  showOnly:
+    field: b-category
+    value: খেলাধুলা
+- name: entertainment
+  type: text
+  config:
+    required: false
+  label: entertainment
+  hidden: true
+  showOnly:
+    field: b-category
+    value: বিনোদন
