@@ -17,19 +17,43 @@ fields:
   label: date
   config:
     required: true
-- type: text
-  name: category
-  label: category
+- name: b-category
+  type: select
+  default: ''
   config:
     required: true
-- type: text
-  name: b-category
-  label: b-category
-  config:
-    required: true
+    options:
+    - জাতীয়
+    - আন্তর্জাতিক
+    - খেলাধুলা
+    - বিনোদন
+    - মতামত
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Bangla Category
 - type: file
   name: img
   label: img
 - type: boolean
   name: featured
   label: featured
+- name: category
+  type: select
+  default: ''
+  config:
+    required: true
+    options:
+    - national
+    - international
+    - sports
+    - entertainment
+    - opinion
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Category
