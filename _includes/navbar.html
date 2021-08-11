@@ -3,7 +3,7 @@
 	<a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 	<button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
 			{% for item in site.data.main-nav %}
                 <li class="nav-item {% if page.url == item.link %} active {% endif %}"><a class="nav-link" href="{{ item.link | relative_url  }}"> {{ item.b }}</a></li>
 				
@@ -11,8 +11,8 @@
                 
             </ul>
 {% if page.url == "/" %}
-            <form class="me-auto search-form position-relative" target="_self">
-    <div class="d-flex align-items-center"><label class="form-label d-flex mb-0" for="search-field"><i class="fas fa-search"></i></label><input type="search" class="form-control search-field" id="search-field" name="search" oninput="display()"/></div>
+            <form class="ms-auto search-form position-relative" target="_self">
+    <div class="d-flex align-items-center"><input type="search" class="form-control search-field" id="search-field" name="search" oninput="display()"/><label class="form-label d-flex mb-0" for="search-field"><i class="fas fa-search"></i></label></div>
     <div class="position-absolute" id="search-results" style="display:none">
 	   <ul class="card srul"></ul>
 	</div>

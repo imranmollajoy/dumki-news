@@ -1,7 +1,12 @@
 ---
 layout: category-page
-b-title: জাতীয়
-title: national
+b-title: আন্তর্জাতিক
+title: international
+permalink: /international/
+pagination:
+ enabled: true
+ category: international
+ permalink: /:num/
 ---
 
 This file is only used to initiate the compilation of a category page for the category shown as title.

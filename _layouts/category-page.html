@@ -13,7 +13,7 @@ layout: default
 	</header>
 	<div id="post-list">
 {%- assign found = false -%}
-{%- for post in site.posts -%}
+{%- for post in paginator.posts -%}
 	{%- if post.categories -%}
 		{%- for cat in post.categories -%}
 			{%- if cat == page.title -%}
@@ -36,6 +36,24 @@ layout: default
 		{%- endfor -%}
 	{%- endif -%}
 {%- endfor -%}
+</div>
+<!-- Pagination links -->
+
+<nav aria-label="Page navigation" class="mx-auto">
+  <ul class="pagination">
+  {% if paginator.previous_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path  | relative_url }}" >Previous</a></li>
+   {% else %}
+   <li class="page-item disabled"><a class="page-link">Previous</a></li>
+   {% endif %}
+    <li class="page-item"><span class="page-link">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></li>
+   {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path  | relative_url }}">Next</a></li>
+	{% else %}
+    <li class="page-item disabled"><a class="page-link">Next</a></li>
+	{% endif %}
+  </ul>
+</nav>
 </div>
 	</div>
 <!-- End of generated category page -->

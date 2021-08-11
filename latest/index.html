@@ -1,0 +1,51 @@
+---
+layout: default
+title: My Blog
+pagination: 
+  enabled: true
+---
+<div class="container">
+<div class="row">
+            <div class="col">
+                <div class="card-group">
+			{% for post in paginator.posts %}
+                    <div class="col-sm-6 col-md-4 col-lg-3 p-2 my-4" style="
+					-webkit-box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.22); 
+                    box-shadow: 0px 5px 3px 0px rgba(0,0,0,0.22);">
+					  <img class="card-img-top w-100 d-block sports-img" src={% if post.img != '' %} 
+					"{{ post.img  | relative_url }}" 
+					{% else %} 
+					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}  />
+                        <div class="card-body"><a href="{{ post.url | relative_url }}">
+                                <h4>{{ post.title }}</h4>
+                            </a>
+                            <p class="card-text"><time class="postedon" datetime="{{ post.date | date_to_xmlschema }}"><span class="postedago"></span></time></p>
+                        </div>
+                    </div>
+			{% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+<!-- Pagination links -->
+
+<nav aria-label="Page navigation" class="mx-auto">
+  <ul class="pagination">
+  {% if paginator.previous_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path  | relative_url }}" >Previous</a></li>
+   {% else %}
+   <li class="page-item disabled"><a class="page-link">Previous</a></li>
+   {% endif %}
+    <li class="page-item"><span class="page-link">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span></li>
+   {% if paginator.next_page %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path  | relative_url }}">Next</a></li>
+	{% else %}
+    <li class="page-item disabled"><a class="page-link">Next</a></li>
+	{% endif %}
+  </ul>
+</nav>
+</div>
+	</div>
+<!-- End of generated category page -->
+</div>
