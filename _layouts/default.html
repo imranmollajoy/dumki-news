@@ -3,7 +3,8 @@
 
   {%- include head.html -%}
 
-  <body>
+  <body {% if page.url!='/' %} onload="fixnav()"{% endif %}>
+  <div id="not-footer" onload="pageloaded()">
   {% if site.constructing %}
   k
   {% else %}
@@ -18,7 +19,7 @@
    
         {{ content }}
     </main>
-
+</div>
     {%- include footer-black.html -%}
 {% endif %}
   </body>

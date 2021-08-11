@@ -10,15 +10,13 @@
            {% endfor %}
                 
             </ul>
+{% if page.url == "/" %}
             <form class="me-auto search-form position-relative" target="_self">
     <div class="d-flex align-items-center"><label class="form-label d-flex mb-0" for="search-field"><i class="fas fa-search"></i></label><input type="search" class="form-control search-field" id="search-field" name="search" oninput="display()"/></div>
     <div class="position-absolute" id="search-results" style="display:none">
 	   <ul class="card srul"></ul>
 	</div>
 </form>
-        </div>
-    </div>
-</nav>
 <!-- Script pointing to search-script.js -->
 <script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
 
@@ -39,7 +37,13 @@ function display(){
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-field'),
   resultsContainer: document.getElementById('search-results'),
-  json: 'search.json'
+  json: 'search-lite.json'
 });
 
 </script>
+{% else %}
+<a href="{{ "search" | relative_url }}" class="btn btn-primary ms-auto">Search</a>
+{% endif %}
+        </div>
+    </div>
+</nav>

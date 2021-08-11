@@ -1,0 +1,13 @@
+ <!-- Script pointing to search-script.js -->
+<script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<div><a href="{url}"><h3>{title}</h3></a></div>',
+  noResultsText:("<div><h3>No result found!</h3></div>"),
+  json: '{{ '/search.json' | relative_url }}'
+});
+</script>

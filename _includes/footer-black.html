@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-3 item">
+            <div class="col item">
                 <h3>Categories</h3>
                 <ul>
                     {% for item in site.data.main-nav %}
@@ -13,7 +13,7 @@
            {% endfor %}
                 </ul>
             </div>
-            <div class="col-sm-6 col-md-3 item">
+            <div class="col item">
                 <h3>Site Navigation</h3>
                 <ul>
                    {% for item in site.data.footer-site-links %}
@@ -28,7 +28,7 @@
                 <h3>{{ site.title | escape }}</h3>
                 <p>{{- site.description | escape -}}</p>
             </div>
-            <div class="col item social">
+            <div class="col-sm-12 item social">
 			<a href="#"><i class="fab fa-twitter"></i></a>
 			<a href="#"><i class="fab fa-facebook"></i></a>
 			<a href="#"><i class="fab fa-youtube"></i></a>

@@ -66,6 +66,12 @@ for(i=0;i<date.length;i++)
 {
 	posted[i].innerHTML = ago(date[i]);
 }
+	var footerH = document.querySelector("footer").offsetHeight;
+	document.getElementById("not-footer").style.marginBottom= footerH+"px";
 
+/* fix nav on non homrpagw */
+function fixnav(){
+	mainNav.style.top = "40px";
+}
 
 

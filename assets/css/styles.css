@@ -15,6 +15,15 @@ body{
 ul{
 	padding:0;
 	margin:0;
+	list-style-type:none
+}
+input[type=search]{
+  transition:all 0.3s ease;
+}
+input[type=search]:focus {
+  background-color: rgba(32,201,151,0.37);
+  outline: none;
+  color:var(--bs-black);
 }
 .navigation-clean-search {
   background: var(--bs-light);
@@ -159,10 +168,46 @@ box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.35);
 	transition:all 0.3s ease;
 
 }
+#results-container{
+	width:80%;
+	
+}
+#results-container > div{
+	margin:1.8rem 0;
+	transition:all 0.3s ease;
+}
 #search-results > li{
 	padding-bottom:1.5rem ;
 	
 	}
+	
+.search-container .row{
+	 min-height: 80vh;
+}
+.search-container h1{
+	  font-weight: 700;
+	  font-size: 4em;
+	  display:inline-block;
+}
+.search-container p{
+	 margin-top: 0px;
+	 margin-bottom: 0px;
+	 font-size: 1.5em;
+}
+.search-container #search-input{
+	 width: 50%;
+	 border-radius:1.7rem;
+	 padding: 12px 20px;
+	 box-sizing: border-box;
+	 
+     border: 2px solid var(--bs-primary);
+}
+.search-container #search-input:focus{
+	 width: 100%;
+	 border-radius:.7rem;
+	 border: none;
+     border-bottom: 6px solid var(--bs-primary);
+}
 .news-card {
   position: relative;
   min-height: 256px;
@@ -505,11 +550,21 @@ p.date{
   border-radius: 50%;
   margin-bottom:-16px;
 }
-
+#not-footer{
+	 position: relative;
+    z-index: 1;
+	background:var(--bs-white);
+}
 .footer {
   padding: 50px 0;
   color: #f0f9ff;
   background-color: var(--bs-gray-dark);
+  position:fixed;
+  z-index:0;
+  width:100%;
+  bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .footer h3 {
