@@ -18,7 +18,7 @@ install:
 
 script:
   - JEKYLL_ENV=production bundle exec jekyll build
-  - bundle exec htmlproofer docs --check-html --empty_alt_ignore --http-status-ignore 999 # For now, ignore 999 error from linkedin links
+  - bundle exec htmlproofer docs --check-html --empty_alt_ignore 
 
 deploy:
   provider: pages
