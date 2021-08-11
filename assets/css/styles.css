@@ -26,7 +26,7 @@ input[type=search]:focus {
   color:var(--bs-black);
 }
 .navigation-clean-search {
- /* background: var(--bs-light); */
+  background-color: var(--bs-light); 
   padding-top: .75rem;
   padding-bottom: .75rem;
   color: #333;
