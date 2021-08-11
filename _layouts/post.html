@@ -40,7 +40,7 @@ layout: default
 
 {% for post in site.posts limit:6 %}
    {% if post.url != page.url %}
-                    <article class="with-image"><img src={% if post.img != '' %}{{ post.img  | relative_url }} {% else %}{{ "/assets/images/default.jpg" | relative_url }}{% endif %} />
+                    <article class="with-image">
 					    <p style="margin-top:4px;margin-bottom:0;">{{ post.b-category }}</p>
                         <a href="{{ post.url | relative_url }}">
 						<h5>{{ post.title }}</h5>
