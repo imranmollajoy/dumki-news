@@ -1,9 +1,9 @@
 - name: জাতীয়
-  link: /national.html
+  link: /national
   b: জাতীয়
-- name: জাতীয়
-  link: /national.html
+- name: আন্তর্জাতিক
+  link: /international
   b: আন্তর্জাতিক
 - name: খেলাধুলা
-  link: /sports.html
+  link: /sports
   b: খেলাধুলা
