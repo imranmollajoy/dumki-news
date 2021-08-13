@@ -60,6 +60,9 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="navbar-nav ms-auto">
 			
+                <li class="nav-item "><a class="nav-link" href="/dumki-news/latest"> সর্বশেষ</a></li>
+				
+           
                 <li class="nav-item "><a class="nav-link" href="/dumki-news/national"> জাতীয়</a></li>
 				
            
@@ -72,7 +75,7 @@
                 
             </ul>
 
-<a href="/dumki-news/search" class="btn btn-primary ms-auto search-btn">Search</a>
+<a href="/dumki-news/search" class="btn btn-primary ms-auto search-btn">খুঁজুন</a>
 
         </div>
     </div>
@@ -82,9 +85,10 @@
         <div class="container search-container">
     <div class="row g-0 align-items-stretch">
         <div class="col-md-12 align-self-center d-flex flex-column">
-            <h1>404<br />Not found :(</h1>
-            <p>Make a search instead</p>
-			<input type="search" id="search-input" placeholder="    search..." />
+            <h1 class="mb-0">৪০৪<h1>
+			<h2 class="mb-4">দুঃখিত, কাঙ্ক্ষিত পৃষ্ঠাটি সার্ভারে নেই :(</h2>
+            <p>খুঁজে দেখতে পারেন</p>
+			<input type="search" id="search-input" placeholder="  এখানে খুঁজুন..." />
 			<ul id="results-container"></ul>
         </div>
     </div>
@@ -111,6 +115,12 @@ SimpleJekyllSearch({
                 <h3>সংবাদ</h3>
                 <ul>
                     
+                <li>
+				<a href="/dumki-news/latest"> সর্বশেষ
+				</a>
+				</li>
+				
+           
                 <li>
 				<a href="/dumki-news/national"> জাতীয়
 				</a>
@@ -145,6 +155,16 @@ SimpleJekyllSearch({
 				</a>
 				</li>
 				
+                <li>
+				<a href="/dumki-news/"> যোগাযোগ
+				</a>
+				</li>
+				
+                <li>
+				<a href="/dumki-news/"> সংবাদদাতা হোন
+				</a>
+				</li>
+				
                 </ul>
             </div>
             <div class="col-md-6 item text">
@@ -157,7 +177,7 @@ SimpleJekyllSearch({
 			<a href="#"><i class="fab fa-youtube"></i></a>
 			</div>
         </div>
-        <p class="copyright">DumkiNews © 2021</p>
+        <p class="copyright">DumkiNews © <span class="tobangla">2021</span></p>
     </div>
 </footer>
 
