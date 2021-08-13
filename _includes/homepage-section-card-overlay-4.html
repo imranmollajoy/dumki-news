@@ -1,12 +1,15 @@
-<section class="posts-home">
+{% assign psize = site.categories.[cat-name] | size %}
+{% unless psize == 0 %} 
+
+<section class="posts-home" id="{{ cat-name }}">
     <div class="container">
-	<a href="{{ "/international.html" | relative_url }}">
-            <h2 class="text-left category-header">আন্তর্জাতিক<i class="fas fa-angle-double-right"></i> </h2>
+	<a href="{{ cat-name | relative_url | downcase }}">
+            <h2 class="text-left category-header">{{ cat-name-b }}<i class="fas fa-angle-double-right"></i> </h2>
         </a>
         <div class="intro"></div>
             <div class="col">
                 <div class="card-group">
-				{% for post in site.categories.international limit:3 %}
+				{% for post in site.categories.[cat-name] limit:3 %}
                     <div class="card news-card">
 					<img class="card-img-top w-100 d-block news-thumbnail" src={% if post.img != '' %} 
 					"{{ post.img  | relative_url }}" 
@@ -23,3 +26,4 @@
         </div>
     </div>
 </section>
+{% endunless %}

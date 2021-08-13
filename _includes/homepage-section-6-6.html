@@ -1,0 +1,40 @@
+{% assign psize = site.categories.[cat-name] | size %}
+{% unless psize == 0 %} 
+
+<section id="{{ cat-name }}">
+    <div class="container home-category"><a href="{{ cat-name | relative_url | downcase }}">
+            <h2 class="text-left category-header px-3">{{ cat-name-b }}<i class="fas fa-angle-double-right"></i> </h2>
+        </a>
+        <div class="intro"></div>
+        <div class="row g-0 justify-content-evenly">
+		{% for post in site.categories.[cat-name] limit:1 %}
+            <div class="col-12 col-sm-12 col-md-6 p-3">
+			<img class="img-fluid" src={% if post.img != '' %} 
+					"{{ post.img  | relative_url }}" 
+					{% else %} 
+					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %}/>
+                <p class="mb-0"><time class="postedon" datetime="{{ post.date | date_to_xmlschema }}"><span class="postedago"></span></time>
+				</p>
+				<a href="{{ post.url | relative_url }}">
+                    <h3 class="mt-0 mb-2">{{ post.title }}</h3>
+                </a>
+                <p class="mt-3">{{ post.excerpt  | truncatewords: 25, "..." }}</p>
+            </div>
+			{% endfor %}
+			
+            <div class="col align-self-stretch p-3">
+                <div class="row g-0">
+				{% for post in site.categories.[cat-name] limit:4 offset:continue %}
+                    <div class="col-12 border-bottom mb-3">
+                        <p class="mb-0"><time class="postedon" datetime="{{ post.date | date_to_xmlschema }}"><span class="postedago"></span></time></p>
+						<a href="{{ post.url | relative_url }}">
+                            <h5>{{ post.title }}</h5>
+                        </a>
+                    </div>
+					{% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endunless %}

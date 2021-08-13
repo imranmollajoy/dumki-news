@@ -4,6 +4,10 @@ p{
 h1,h2,h3,h4,h5,h6{
 font-family: 'Li Shamim Cholontika Unicode', sans-serif;
 	}
+
+a:visited{
+	color:var(--bs-secondary);
+}
 a.btn{
 	color:white;
 	text-transform:capitalize;
@@ -27,6 +31,12 @@ input[type=search]:focus {
   background-color: rgba(32,201,151,0.37);
   outline: none;
   color:var(--bs-black);
+}
+.min-vw-10{
+	min-width:10vw;
+}
+.min-vw-25{
+	min-width:25vw;
 }
 .navigation-clean-search {
   background: var(--bs-light); 

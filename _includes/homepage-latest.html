@@ -1,13 +1,20 @@
-<section class="posts-home">
+<section class="posts-home border-bottom">
     <div class="container">
         <div class="row projects">
 		{% for post in site.posts limit: 1 %}
             <div class="col-sm-12 item first">
                 <div class="row">
-                    <div class="col-md-12 col-lg-5"><a href="{{ post.url | relative_url }}"><img class="img-fluid" src={% if post.img != '' %}{{ post.img  | relative_url }} {% else %}{{ /"assets/images/default.jpg" | relative_url }}{% endif %} /></a></div>
-                    <div class="col"><a href="{{ post.url | relative_url }}">
-                            <h3 class="name"><strong>{{ post.title }}</strong></h3>
-                        </a></div>
+                    <div class="col-md-12 col-lg-5">
+					  <img class="img-fluid" src={% if post.img != '' %} 
+					"{{ post.img  | relative_url }}" 
+					{% else %} 
+					"{{ "/assets/images/default.jpg" | relative_url }}" {% endif %} /></div>
+                    <div class="col">
+					<a href="{{ post.url | relative_url }}">
+                            <h3 class="name">{{ post.title }}</h3>
+                        </a>
+						<p>{{ post.excerpt  | truncatewords: 55 }}</p>
+					</div>
                 </div>
             </div>
 		{% endfor %}
@@ -15,10 +22,10 @@
             <div class="col-sm-12 col-md-6 col-lg-6 item other">
                 
 					    <a href="{{ post.url | relative_url }}">
-                            <h3 class="name"><strong>{{ post.title }}</strong></h3>
+                            <h3 class="name m-0"><strong>{{ post.title }}</strong></h3>
                         </a>
-                        <p class="description">
-						{{ post.excerpt  | truncatewords: 25, "..." }}
+                        <p class="mt-1">
+						{{ post.excerpt  | truncatewords: 25, "..." | strip_html}}
 						</p>
                     
                
@@ -29,6 +36,6 @@
 		
     </div>
 	<div class="col d-flex justify-content-center mt-3">
-	<a href="{{ "/latest" | relative_url }}" class="btn btn-primary text-center">আরো</a>
+	<a href="{{ "/latest" | relative_url }}" class="btn btn-primary text-center min-vw-25 mt-3">আরো</a>
 	</div>
 </section>

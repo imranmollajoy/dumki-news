@@ -9,9 +9,26 @@ layout: default
   {{ content }}
 
     {%  include homepage-latest.html %}
-    {%  include homepage-national.html %}
-	{%  include homepage-international.html %}
-	{%  include homepage-sports.html %}
+	
+    {% assign cat-name = 'national' %}
+	{% assign cat-name-b = 'জাতীয়' %}
+	{%  include homepage-section-card-overlay-4.html  cat-name = cat-name cat-name-b = cat-name-b %}
+	
+	{% assign cat-name = 'international' %}
+	{% assign cat-name-b = 'আন্তর্জাতিক' %}
+	{%  include homepage-section-card-overlay-4.html  cat-name = cat-name cat-name-b = cat-name-b %}
+	
+	{% assign cat-name = 'sports' %}
+	{% assign cat-name-b = 'খেলাধুলা' %}
+	{%  include homepage-section-card-4.html  cat-name = cat-name cat-name-b = cat-name-b %}
+	
+	{% assign cat-name = 'entertainment' %}
+	{% assign cat-name-b = 'বিনোদন' %}
+	{%  include homepage-section-6-6.html cat-name = cat-name cat-name-b = cat-name-b %}
+	
+	{% assign cat-name = 'technology' %}
+	{% assign cat-name-b = 'প্রযুক্তি' %}
+	{%  include homepage-section-6-6.html cat-name = cat-name cat-name-b = cat-name-b %}
 	
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
