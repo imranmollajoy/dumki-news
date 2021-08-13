@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'MyWebFont';
+  font-family: 'Conv_LiShamimCholontika';
   src: url('https://imranmolla.com/assets/fonts/LiShamimCholontika.eot'); /* IE9 Compat Modes */
   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
        url('https://imranmolla.com/assets/fonts/LiShamimCholontika.woff') format('woff'), /* Pretty Modern Browsers */
        url('https://imranmolla.com/assets/fonts/LiShamimCholontika.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('https://imranmolla.com/assets/fonts/LiShamimCholontika.svg#svgFontName') format('svg'); /* Legacy iOS */
+       url('https://imranmolla.com/assets/fonts/LiShamimCholontika.svg#svgConv_LiShamimCholontika') format('svg'); /* Legacy iOS */
 }
 p{
 	margin:1.5rem 0 0 0;
 }
 h1,h2,h3,h4,h5,h6{
-font-family: 'Li Shamim Cholontika Unicode', sans-serif;
+font-family: 'Conv_LiShamimCholontika', Fallback, sans-serif;
 	}
 
 a:visited{
