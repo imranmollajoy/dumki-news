@@ -53,6 +53,8 @@ function ago(date) {
     interval = Math.floor(seconds);
     return render(interval.toLocaleString('ben-BD'), "সেকেন্ড");
 }
+
+/* calculate time */
 var count = 0;
 var date = [];
 document.querySelectorAll('.postedon').forEach(function(elem) {
@@ -66,8 +68,21 @@ for(i=0;i<date.length;i++)
 {
 	posted[i].innerHTML = ago(date[i]);
 }
-	var footerH = document.querySelector("footer").offsetHeight;
-	document.getElementById("not-footer").style.marginBottom= footerH+"px";
+
+/* translate number to bangla */
+var c = 0;
+var numbers = [];
+var show = document.querySelectorAll('.tobangla');
+document.querySelectorAll('.tobangla').forEach(function(elem) {
+	var d = elem.innerHTML;
+	d = parseInt(d,10).toLocaleString('ben-BD');
+	show[c].innerHTML = d;
+	c++;
+	});
+
+
+var footerH = document.querySelector("footer").offsetHeight;
+document.getElementById("not-footer").style.marginBottom= footerH+"px";
 
 /* fix nav on non homrpagw */
 function fixnav(){

@@ -1,3 +1,6 @@
+- name: সর্বশেষ
+  link: /latest
+  b: সর্বশেষ
 - name: জাতীয়
   link: /national
   b: জাতীয়
