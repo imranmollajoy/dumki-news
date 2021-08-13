@@ -2,7 +2,7 @@
 layout: post
 b-category: প্রযুক্তি
 category: technology
-title: facebook is adding e2ee in voice and video call
+title: এবার ভয়েস ও ভিডিও কলেও এন্ড টু এন্ড এনক্রিপশন যুক্ত করতে যাচ্ছে ফেসবুক
 date: 2021-08-13 18:00:00 +0000
 img: ''
 featured: true
