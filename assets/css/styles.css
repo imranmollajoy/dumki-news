@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('https://imranmolla.com/assets/fonts/LiShamimCholontika.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('https://imranmolla.com/assets/fonts/LiShamimCholontika.woff') format('woff'), /* Pretty Modern Browsers */
+       url('https://imranmolla.com/assets/fonts/LiShamimCholontika.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('https://imranmolla.com/assets/fonts/LiShamimCholontika.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 p{
 	margin:1.5rem 0 0 0;
 }
