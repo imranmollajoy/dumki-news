@@ -21,7 +21,7 @@
 title: DumkiNews
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Site is being constructed :)
+  সাইট তৈরি হচ্ছে :)
 baseurl: "/dumki-news" # the subpath of your site, e.g. /blog
 url: "https://imranmollajoy.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
