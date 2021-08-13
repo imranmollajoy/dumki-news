@@ -28,6 +28,7 @@ fields:
     - খেলাধুলা
     - বিনোদন
     - মতামত
+    - প্রযুক্তি
     source:
       type: simple
       section: 
