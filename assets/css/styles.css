@@ -12,6 +12,7 @@ p{
 }
 h1,h2,h3,h4,h5,h6{
 font-family: 'Li Shamim Cholontika Unicode', Fallback, sans-serif;
+font-weight:300;
 	}
 
 a:visited{
