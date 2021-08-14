@@ -215,7 +215,7 @@ box-shadow: 0px 13px 21px -5px rgba(0,0,0,0.35);
 	 min-height: 80vh;
 }
 .search-container h1{
-	  font-weight: 700;
+	  
 	  font-size: 4em;
 	  display:inline-block;
 }
@@ -303,7 +303,7 @@ nav#social-top {
 .social-date {
   color: var(--bs-white);
   margin-bottom: 0;
-  font-weight: 700;
+  
 }
 
 #featured-top img {
@@ -401,7 +401,7 @@ a {
 }
 
 .posts-home h2 {
-  font-weight: bold;
+  
   margin-bottom: 8px;
   color: inherit;
 }
@@ -437,7 +437,7 @@ a {
 
 .posts-home .item.first .name {
   font-size: 1.7em;
-  font-weight: bold;
+  
   margin-top: 10px;
   margin-bottom: 15px;
   color: inherit;
@@ -494,11 +494,11 @@ a {
 }
 
 article.with-image h5 {
-  font-weight: 500;
+  
 }
 
 .post-sidebar h5 {
-  font-weight: 400;
+  font-weight: 300;
 }
 #post .post-body{
 	padding-top:64px;
